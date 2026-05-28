@@ -1,0 +1,697 @@
+[2026-05-28 14:47:45] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 9.0.1.Final
+[2026-05-28 14:47:45] [INFO] [r.d.KiemTraHackathonSpringApiApplication] - Starting KiemTraHackathonSpringApiApplication using Java 21.0.11 with PID 18916 (C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI\build\classes\java\main started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 14:47:45] [DEBUG] [r.d.KiemTraHackathonSpringApiApplication] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 14:47:45] [INFO] [r.d.KiemTraHackathonSpringApiApplication] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 14:47:46] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-05-28 14:47:46] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
+[2026-05-28 14:47:47] [INFO] [o.s.boot.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+[2026-05-28 14:47:47] [INFO] [o.a.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+[2026-05-28 14:47:47] [INFO] [o.a.catalina.core.StandardService] - Starting service [Tomcat]
+[2026-05-28 14:47:47] [INFO] [o.a.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/11.0.21]
+[2026-05-28 14:47:47] [INFO] [o.s.b.w.c.s.WebApplicationContextInitializer] - Root WebApplicationContext: initialization completed in 1128 ms
+[2026-05-28 14:47:47] [INFO] [org.hibernate.orm.jpa] - HHH008540: Processing PersistenceUnitInfo [name: default]
+[2026-05-28 14:47:47] [INFO] [org.hibernate.orm.core] - HHH000001: Hibernate ORM core version 7.2.12.Final
+[2026-05-28 14:47:47] [INFO] [o.s.o.j.p.SpringPersistenceUnitInfo] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-05-28 14:47:48] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+[2026-05-28 14:47:49] [WARN] [org.hibernate.orm.jdbc.error] - HHH000247: ErrorCode: 1045, SQLState: 28000
+[2026-05-28 14:47:49] [WARN] [org.hibernate.orm.jdbc.error] - Access denied for user 'root'@'localhost' (using password: YES)
+[2026-05-28 14:47:49] [WARN] [org.hibernate.orm.jdbc] - HHH100046: Could not obtain connection to query JDBC database metadata
+org.hibernate.exception.AuthException: Unable to obtain isolated JDBC connection [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:87)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at ra.demo.KiemTraHackathonSpringApiApplication.main(KiemTraHackathonSpringApiApplication.java:10)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48)
+	... 37 common frames omitted
+[2026-05-28 14:47:49] [WARN] [org.hibernate.orm.deprecation] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2026-05-28 14:47:49] [INFO] [o.hibernate.orm.connections.pooling] - HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database dialect: MySQLDialect
+	Database version: 8.0
+	Default catalog/schema: unknown/unknown
+	Autocommit mode: undefined/unknown
+	Isolation level: NONE [default NONE]
+	JDBC fetch size: undefined/unknown
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-05-28 14:47:50] [INFO] [org.hibernate.orm.core] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-05-28 14:47:50] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+[2026-05-28 14:47:51] [WARN] [org.hibernate.orm.jdbc.error] - HHH000247: ErrorCode: 1045, SQLState: 28000
+[2026-05-28 14:47:51] [WARN] [org.hibernate.orm.jdbc.error] - Access denied for user 'root'@'localhost' (using password: YES)
+[2026-05-28 14:47:51] [ERROR] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Failed to initialize JPA EntityManagerFactory: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.AuthException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+[2026-05-28 14:47:51] [WARN] [o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.AuthException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+[2026-05-28 14:47:51] [INFO] [o.a.catalina.core.StandardService] - Stopping service [Tomcat]
+[2026-05-28 14:47:51] [INFO] [o.s.b.a.l.ConditionEvaluationReportLogger] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2026-05-28 14:47:51] [ERROR] [o.s.boot.SpringApplication] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.AuthException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at ra.demo.KiemTraHackathonSpringApiApplication.main(KiemTraHackathonSpringApiApplication.java:10)
+Caused by: jakarta.persistence.PersistenceException: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.AuthException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:448)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.AuthException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:87)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:71)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:37)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:61)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:68)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getJdbcDatabaseMetaData(InformationExtractorJdbcDatabaseMetaDataImpl.java:38)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:76)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:496)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:124)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:269)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323)
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	... 19 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44)
+	... 42 common frames omitted
+[2026-05-28 14:49:31] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 9.0.1.Final
+[2026-05-28 14:49:31] [INFO] [r.d.KiemTraHackathonSpringApiApplication] - Starting KiemTraHackathonSpringApiApplication using Java 21.0.11 with PID 20840 (C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI\build\classes\java\main started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 14:49:31] [DEBUG] [r.d.KiemTraHackathonSpringApiApplication] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 14:49:31] [INFO] [r.d.KiemTraHackathonSpringApiApplication] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 14:49:32] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-05-28 14:49:32] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.
+[2026-05-28 14:49:32] [INFO] [o.s.boot.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+[2026-05-28 14:49:32] [INFO] [o.a.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+[2026-05-28 14:49:32] [INFO] [o.a.catalina.core.StandardService] - Starting service [Tomcat]
+[2026-05-28 14:49:32] [INFO] [o.a.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/11.0.21]
+[2026-05-28 14:49:32] [INFO] [o.s.b.w.c.s.WebApplicationContextInitializer] - Root WebApplicationContext: initialization completed in 887 ms
+[2026-05-28 14:49:32] [INFO] [org.hibernate.orm.jpa] - HHH008540: Processing PersistenceUnitInfo [name: default]
+[2026-05-28 14:49:32] [INFO] [org.hibernate.orm.core] - HHH000001: Hibernate ORM core version 7.2.12.Final
+[2026-05-28 14:49:33] [INFO] [o.s.o.j.p.SpringPersistenceUnitInfo] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-05-28 14:49:33] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+[2026-05-28 14:49:34] [WARN] [org.hibernate.orm.jdbc.error] - HHH000247: ErrorCode: 1045, SQLState: 28000
+[2026-05-28 14:49:34] [WARN] [org.hibernate.orm.jdbc.error] - Access denied for user 'root'@'localhost' (using password: YES)
+[2026-05-28 14:49:34] [WARN] [org.hibernate.orm.jdbc] - HHH100046: Could not obtain connection to query JDBC database metadata
+org.hibernate.exception.AuthException: Unable to obtain isolated JDBC connection [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:87)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at ra.demo.KiemTraHackathonSpringApiApplication.main(KiemTraHackathonSpringApiApplication.java:10)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48)
+	... 37 common frames omitted
+[2026-05-28 14:49:35] [WARN] [org.hibernate.orm.deprecation] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2026-05-28 14:49:35] [INFO] [o.hibernate.orm.connections.pooling] - HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database dialect: MySQLDialect
+	Database version: 8.0
+	Default catalog/schema: unknown/unknown
+	Autocommit mode: undefined/unknown
+	Isolation level: NONE [default NONE]
+	JDBC fetch size: undefined/unknown
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-05-28 14:49:35] [INFO] [org.hibernate.orm.core] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-05-28 14:49:35] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+[2026-05-28 14:49:36] [WARN] [org.hibernate.orm.jdbc.error] - HHH000247: ErrorCode: 1045, SQLState: 28000
+[2026-05-28 14:49:36] [WARN] [org.hibernate.orm.jdbc.error] - Access denied for user 'root'@'localhost' (using password: YES)
+[2026-05-28 14:49:36] [ERROR] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Failed to initialize JPA EntityManagerFactory: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.AuthException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+[2026-05-28 14:49:36] [WARN] [o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.AuthException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+[2026-05-28 14:49:36] [INFO] [o.a.catalina.core.StandardService] - Stopping service [Tomcat]
+[2026-05-28 14:49:36] [INFO] [o.s.b.a.l.ConditionEvaluationReportLogger] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2026-05-28 14:49:36] [ERROR] [o.s.boot.SpringApplication] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.AuthException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at ra.demo.KiemTraHackathonSpringApiApplication.main(KiemTraHackathonSpringApiApplication.java:10)
+Caused by: jakarta.persistence.PersistenceException: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.exception.AuthException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:448)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813)
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.AuthException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:87)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:71)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:37)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:61)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:68)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getJdbcDatabaseMetaData(InformationExtractorJdbcDatabaseMetaDataImpl.java:38)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:76)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:496)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:124)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:269)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:323)
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:437)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1456)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	... 19 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44)
+	... 42 common frames omitted
+[2026-05-28 14:50:32] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 9.0.1.Final
+[2026-05-28 14:50:32] [INFO] [r.d.KiemTraHackathonSpringApiApplication] - Starting KiemTraHackathonSpringApiApplication using Java 21.0.11 with PID 11552 (C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI\build\classes\java\main started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 14:50:32] [DEBUG] [r.d.KiemTraHackathonSpringApiApplication] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 14:50:32] [INFO] [r.d.KiemTraHackathonSpringApiApplication] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 14:50:33] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-05-28 14:50:33] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interface.
+[2026-05-28 14:50:33] [INFO] [o.s.boot.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+[2026-05-28 14:50:33] [INFO] [o.a.coyote.http11.Http11NioProtocol] - Initializing ProtocolHandler ["http-nio-8080"]
+[2026-05-28 14:50:33] [INFO] [o.a.catalina.core.StandardService] - Starting service [Tomcat]
+[2026-05-28 14:50:33] [INFO] [o.a.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/11.0.21]
+[2026-05-28 14:50:33] [INFO] [o.s.b.w.c.s.WebApplicationContextInitializer] - Root WebApplicationContext: initialization completed in 1108 ms
+[2026-05-28 14:50:34] [INFO] [org.hibernate.orm.jpa] - HHH008540: Processing PersistenceUnitInfo [name: default]
+[2026-05-28 14:50:34] [INFO] [org.hibernate.orm.core] - HHH000001: Hibernate ORM core version 7.2.12.Final
+[2026-05-28 14:50:34] [INFO] [o.s.o.j.p.SpringPersistenceUnitInfo] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-05-28 14:50:34] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+[2026-05-28 14:50:35] [INFO] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@686e7513
+[2026-05-28 14:50:35] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+[2026-05-28 14:50:35] [WARN] [org.hibernate.orm.deprecation] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2026-05-28 14:50:35] [INFO] [o.hibernate.orm.connections.pooling] - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_hackathon_springapi?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.7
+	Default catalog/schema: db_hackathon_springapi/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-05-28 14:50:36] [INFO] [org.hibernate.orm.core] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-05-28 14:50:36] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-05-28 14:50:36] [INFO] [o.s.d.j.r.q.QueryEnhancerFactories] - Hibernate is in classpath; If applicable, HQL parser will be used.
+[2026-05-28 14:50:36] [WARN] [o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-05-28 14:50:36] [INFO] [o.a.coyote.http11.Http11NioProtocol] - Starting ProtocolHandler ["http-nio-8080"]
+[2026-05-28 14:50:36] [INFO] [o.s.boot.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path '/'
+[2026-05-28 14:50:36] [INFO] [r.d.KiemTraHackathonSpringApiApplication] - Started KiemTraHackathonSpringApiApplication in 4.551 seconds (process running for 5.153)
+[2026-05-28 14:52:47] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 9.0.1.Final
+[2026-05-28 14:52:47] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - Starting KiemTraHackathonSpringApiApplicationTests using Java 21.0.11 with PID 10288 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 14:52:47] [DEBUG] [r.d.KiemTraHackathonSpringApiApplicationTests] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 14:52:47] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 14:52:48] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-05-28 14:52:48] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interface.
+[2026-05-28 14:52:48] [INFO] [org.hibernate.orm.jpa] - HHH008540: Processing PersistenceUnitInfo [name: default]
+[2026-05-28 14:52:48] [INFO] [org.hibernate.orm.core] - HHH000001: Hibernate ORM core version 7.2.12.Final
+[2026-05-28 14:52:49] [INFO] [o.s.o.j.p.SpringPersistenceUnitInfo] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-05-28 14:52:49] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+[2026-05-28 14:52:49] [INFO] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@357cdb00
+[2026-05-28 14:52:49] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+[2026-05-28 14:52:49] [WARN] [org.hibernate.orm.deprecation] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2026-05-28 14:52:49] [INFO] [o.hibernate.orm.connections.pooling] - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_hackathon_springapi?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.7
+	Default catalog/schema: db_hackathon_springapi/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-05-28 14:52:50] [INFO] [org.hibernate.orm.core] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-05-28 14:52:50] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-05-28 14:52:50] [INFO] [o.s.d.j.r.q.QueryEnhancerFactories] - Hibernate is in classpath; If applicable, HQL parser will be used.
+[2026-05-28 14:52:50] [WARN] [o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-05-28 14:52:51] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - Started KiemTraHackathonSpringApiApplicationTests in 4.382 seconds (process running for 5.839)
+[2026-05-28 14:52:51] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [ra.demo.controller.BookControllerTest]: BookControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2026-05-28 14:52:52] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration ra.demo.KiemTraHackathonSpringApiApplication for test class ra.demo.controller.BookControllerTest
+[2026-05-28 14:52:52] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [ra.demo.controller.BookControllerTest]: BookControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2026-05-28 14:52:52] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration ra.demo.KiemTraHackathonSpringApiApplication for test class ra.demo.controller.BookControllerTest
+[2026-05-28 14:52:52] [INFO] [r.demo.controller.BookControllerTest] - Starting BookControllerTest using Java 21.0.11 with PID 10288 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 14:52:52] [DEBUG] [r.demo.controller.BookControllerTest] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 14:52:52] [INFO] [r.demo.controller.BookControllerTest] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 14:52:52] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+[2026-05-28 14:52:52] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+[2026-05-28 14:52:52] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 2 ms
+[2026-05-28 14:52:52] [INFO] [r.demo.controller.BookControllerTest] - Started BookControllerTest in 0.65 seconds (process running for 7.049)
+[2026-05-28 14:52:53] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=99
+[2026-05-28 14:52:53] [ERROR] [r.demo.service.impl.BookServiceImpl] - Không tìm thấy sách với id=99
+[2026-05-28 14:52:53] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBooks()
+[2026-05-28 14:52:53] [INFO] [r.demo.service.impl.BookServiceImpl] - Lấy danh sách sách thành công, số lượng = 2
+[2026-05-28 14:52:53] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=1
+[2026-05-28 14:52:53] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-05-28 14:52:53] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+[2026-05-28 14:52:53] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+[2026-05-28 14:57:39] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 9.0.1.Final
+[2026-05-28 14:57:39] [INFO] [r.demo.controller.BookControllerTest] - Starting BookControllerTest using Java 21.0.11 with PID 21984 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 14:57:39] [DEBUG] [r.demo.controller.BookControllerTest] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 14:57:39] [INFO] [r.demo.controller.BookControllerTest] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 14:57:42] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+[2026-05-28 14:57:42] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+[2026-05-28 14:57:42] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 3 ms
+[2026-05-28 14:57:42] [INFO] [r.demo.controller.BookControllerTest] - Started BookControllerTest in 2.933 seconds (process running for 4.391)
+[2026-05-28 14:57:42] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [ra.demo.KiemTraHackathonSpringApiApplicationTests]: KiemTraHackathonSpringApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2026-05-28 14:57:42] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration ra.demo.KiemTraHackathonSpringApiApplication for test class ra.demo.KiemTraHackathonSpringApiApplicationTests
+[2026-05-28 14:57:42] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [ra.demo.KiemTraHackathonSpringApiApplicationTests]: KiemTraHackathonSpringApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2026-05-28 14:57:42] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration ra.demo.KiemTraHackathonSpringApiApplication for test class ra.demo.KiemTraHackathonSpringApiApplicationTests
+[2026-05-28 14:57:42] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - Starting KiemTraHackathonSpringApiApplicationTests using Java 21.0.11 with PID 21984 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 14:57:42] [DEBUG] [r.d.KiemTraHackathonSpringApiApplicationTests] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 14:57:42] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 14:57:43] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-05-28 14:57:43] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+[2026-05-28 14:57:43] [INFO] [org.hibernate.orm.jpa] - HHH008540: Processing PersistenceUnitInfo [name: default]
+[2026-05-28 14:57:43] [INFO] [org.hibernate.orm.core] - HHH000001: Hibernate ORM core version 7.2.12.Final
+[2026-05-28 14:57:44] [INFO] [o.s.o.j.p.SpringPersistenceUnitInfo] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-05-28 14:57:44] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+[2026-05-28 14:57:44] [INFO] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38320819
+[2026-05-28 14:57:44] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+[2026-05-28 14:57:44] [WARN] [org.hibernate.orm.deprecation] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2026-05-28 14:57:44] [INFO] [o.hibernate.orm.connections.pooling] - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_hackathon_springapi?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.7
+	Default catalog/schema: db_hackathon_springapi/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-05-28 14:57:45] [INFO] [org.hibernate.orm.core] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-05-28 14:57:45] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-05-28 14:57:45] [INFO] [o.s.d.j.r.q.QueryEnhancerFactories] - Hibernate is in classpath; If applicable, HQL parser will be used.
+[2026-05-28 14:57:46] [WARN] [o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-05-28 14:57:46] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - Started KiemTraHackathonSpringApiApplicationTests in 3.54 seconds (process running for 8.488)
+[2026-05-28 14:57:46] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=99
+[2026-05-28 14:57:46] [ERROR] [r.demo.service.impl.BookServiceImpl] - Không tìm thấy sách với id=99
+[2026-05-28 14:57:46] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBooks()
+[2026-05-28 14:57:46] [INFO] [r.demo.service.impl.BookServiceImpl] - Lấy danh sách sách thành công, số lượng = 2
+[2026-05-28 14:57:46] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=1
+[2026-05-28 14:57:46] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-05-28 14:57:46] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+[2026-05-28 14:57:46] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+[2026-05-28 15:01:07] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 9.0.1.Final
+[2026-05-28 15:01:07] [INFO] [r.demo.controller.BookControllerTest] - Starting BookControllerTest using Java 21.0.11 with PID 22920 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 15:01:07] [DEBUG] [r.demo.controller.BookControllerTest] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 15:01:07] [INFO] [r.demo.controller.BookControllerTest] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 15:01:09] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+[2026-05-28 15:01:09] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+[2026-05-28 15:01:09] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 3 ms
+[2026-05-28 15:01:09] [INFO] [r.demo.controller.BookControllerTest] - Started BookControllerTest in 2.378 seconds (process running for 4.967)
+[2026-05-28 15:02:01] [INFO] [o.s.boot.tomcat.GracefulShutdown] - Commencing graceful shutdown. Waiting for active requests to complete
+[2026-05-28 15:02:01] [INFO] [o.s.boot.tomcat.GracefulShutdown] - Graceful shutdown complete
+[2026-05-28 15:02:01] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-05-28 15:02:01] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+[2026-05-28 15:02:01] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+[2026-05-28 15:04:04] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 9.0.1.Final
+[2026-05-28 15:04:04] [INFO] [r.demo.controller.BookControllerTest] - Starting BookControllerTest using Java 21.0.11 with PID 8504 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 15:04:04] [DEBUG] [r.demo.controller.BookControllerTest] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 15:04:04] [INFO] [r.demo.controller.BookControllerTest] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 15:04:06] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+[2026-05-28 15:04:06] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+[2026-05-28 15:04:06] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 4 ms
+[2026-05-28 15:04:06] [INFO] [r.demo.controller.BookControllerTest] - Started BookControllerTest in 3.173 seconds (process running for 4.729)
+[2026-05-28 15:04:07] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=99
+[2026-05-28 15:04:07] [ERROR] [r.demo.service.impl.BookServiceImpl] - Không tìm thấy sách với id=99
+[2026-05-28 15:04:07] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBooks()
+[2026-05-28 15:04:07] [INFO] [r.demo.service.impl.BookServiceImpl] - Lấy danh sách sách thành công, số lượng = 2
+[2026-05-28 15:04:07] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=1
+[2026-05-28 15:05:28] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 9.0.1.Final
+[2026-05-28 15:05:28] [INFO] [r.demo.controller.BookControllerTest] - Starting BookControllerTest using Java 21.0.11 with PID 5080 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 15:05:28] [DEBUG] [r.demo.controller.BookControllerTest] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 15:05:28] [INFO] [r.demo.controller.BookControllerTest] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 15:05:31] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+[2026-05-28 15:05:31] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+[2026-05-28 15:05:31] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 3 ms
+[2026-05-28 15:05:31] [INFO] [r.demo.controller.BookControllerTest] - Started BookControllerTest in 3.609 seconds (process running for 6.839)
+[2026-05-28 15:05:31] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=99
+[2026-05-28 15:05:31] [ERROR] [r.demo.service.impl.BookServiceImpl] - Không tìm thấy sách với id=99
+[2026-05-28 15:05:31] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBooks()
+[2026-05-28 15:05:31] [INFO] [r.demo.service.impl.BookServiceImpl] - Lấy danh sách sách thành công, số lượng = 2
+[2026-05-28 15:05:31] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=1
+[2026-05-28 15:05:49] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 9.0.1.Final
+[2026-05-28 15:05:49] [INFO] [r.demo.controller.BookControllerTest] - Starting BookControllerTest using Java 21.0.11 with PID 8748 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 15:05:49] [DEBUG] [r.demo.controller.BookControllerTest] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 15:05:49] [INFO] [r.demo.controller.BookControllerTest] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 15:05:51] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+[2026-05-28 15:05:51] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+[2026-05-28 15:05:51] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 2 ms
+[2026-05-28 15:05:51] [INFO] [r.demo.controller.BookControllerTest] - Started BookControllerTest in 2.888 seconds (process running for 4.692)
+[2026-05-28 15:05:52] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=99
+[2026-05-28 15:05:52] [ERROR] [r.demo.service.impl.BookServiceImpl] - Không tìm thấy sách với id=99
+[2026-05-28 15:05:52] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBooks()
+[2026-05-28 15:05:52] [INFO] [r.demo.service.impl.BookServiceImpl] - Lấy danh sách sách thành công, số lượng = 2
+[2026-05-28 15:05:52] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=1
+[2026-05-28 15:06:05] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 9.0.1.Final
+[2026-05-28 15:06:05] [INFO] [r.demo.controller.BookControllerTest] - Starting BookControllerTest using Java 21.0.11 with PID 21612 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 15:06:05] [DEBUG] [r.demo.controller.BookControllerTest] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 15:06:05] [INFO] [r.demo.controller.BookControllerTest] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 15:06:08] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+[2026-05-28 15:06:08] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+[2026-05-28 15:06:08] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 7 ms
+[2026-05-28 15:06:08] [INFO] [r.demo.controller.BookControllerTest] - Started BookControllerTest in 3.584 seconds (process running for 5.647)
+[2026-05-28 15:06:09] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [ra.demo.KiemTraHackathonSpringApiApplicationTests]: KiemTraHackathonSpringApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2026-05-28 15:06:09] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration ra.demo.KiemTraHackathonSpringApiApplication for test class ra.demo.KiemTraHackathonSpringApiApplicationTests
+[2026-05-28 15:06:09] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [ra.demo.KiemTraHackathonSpringApiApplicationTests]: KiemTraHackathonSpringApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2026-05-28 15:06:09] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration ra.demo.KiemTraHackathonSpringApiApplication for test class ra.demo.KiemTraHackathonSpringApiApplicationTests
+[2026-05-28 15:06:09] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - Starting KiemTraHackathonSpringApiApplicationTests using Java 21.0.11 with PID 21612 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 15:06:09] [DEBUG] [r.d.KiemTraHackathonSpringApiApplicationTests] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 15:06:09] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 15:06:10] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-05-28 15:06:10] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interface.
+[2026-05-28 15:06:10] [INFO] [org.hibernate.orm.jpa] - HHH008540: Processing PersistenceUnitInfo [name: default]
+[2026-05-28 15:06:10] [INFO] [org.hibernate.orm.core] - HHH000001: Hibernate ORM core version 7.2.12.Final
+[2026-05-28 15:06:11] [INFO] [o.s.o.j.p.SpringPersistenceUnitInfo] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-05-28 15:06:11] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+[2026-05-28 15:06:12] [INFO] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a02fca5
+[2026-05-28 15:06:12] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+[2026-05-28 15:06:12] [WARN] [org.hibernate.orm.deprecation] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2026-05-28 15:06:12] [INFO] [o.hibernate.orm.connections.pooling] - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_hackathon_springapi?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.7
+	Default catalog/schema: db_hackathon_springapi/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-05-28 15:06:13] [INFO] [org.hibernate.orm.core] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-05-28 15:06:13] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-05-28 15:06:13] [INFO] [o.s.d.j.r.q.QueryEnhancerFactories] - Hibernate is in classpath; If applicable, HQL parser will be used.
+[2026-05-28 15:06:13] [WARN] [o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-05-28 15:06:14] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - Started KiemTraHackathonSpringApiApplicationTests in 4.524 seconds (process running for 10.881)
+[2026-05-28 15:06:14] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=99
+[2026-05-28 15:06:14] [ERROR] [r.demo.service.impl.BookServiceImpl] - Không tìm thấy sách với id=99
+[2026-05-28 15:06:14] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBooks()
+[2026-05-28 15:06:14] [INFO] [r.demo.service.impl.BookServiceImpl] - Lấy danh sách sách thành công, số lượng = 2
+[2026-05-28 15:06:14] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=1
+[2026-05-28 15:06:14] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-05-28 15:06:14] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+[2026-05-28 15:06:14] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+[2026-05-28 15:06:18] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 9.0.1.Final
+[2026-05-28 15:06:18] [INFO] [r.demo.controller.BookControllerTest] - Starting BookControllerTest using Java 21.0.11 with PID 19908 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 15:06:18] [DEBUG] [r.demo.controller.BookControllerTest] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 15:06:18] [INFO] [r.demo.controller.BookControllerTest] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 15:06:20] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+[2026-05-28 15:06:20] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+[2026-05-28 15:06:20] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 3 ms
+[2026-05-28 15:06:20] [INFO] [r.demo.controller.BookControllerTest] - Started BookControllerTest in 2.859 seconds (process running for 4.619)
+[2026-05-28 15:06:21] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=99
+[2026-05-28 15:06:21] [ERROR] [r.demo.service.impl.BookServiceImpl] - Không tìm thấy sách với id=99
+[2026-05-28 15:06:21] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBooks()
+[2026-05-28 15:06:21] [INFO] [r.demo.service.impl.BookServiceImpl] - Lấy danh sách sách thành công, số lượng = 2
+[2026-05-28 15:06:21] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=1
+[2026-05-28 15:06:35] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 9.0.1.Final
+[2026-05-28 15:06:35] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - Starting KiemTraHackathonSpringApiApplicationTests using Java 21.0.11 with PID 21036 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 15:06:35] [DEBUG] [r.d.KiemTraHackathonSpringApiApplicationTests] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 15:06:35] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 15:06:35] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-05-28 15:06:36] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 91 ms. Found 1 JPA repository interface.
+[2026-05-28 15:06:36] [INFO] [org.hibernate.orm.jpa] - HHH008540: Processing PersistenceUnitInfo [name: default]
+[2026-05-28 15:06:36] [INFO] [org.hibernate.orm.core] - HHH000001: Hibernate ORM core version 7.2.12.Final
+[2026-05-28 15:06:37] [INFO] [o.s.o.j.p.SpringPersistenceUnitInfo] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-05-28 15:06:37] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+[2026-05-28 15:06:37] [INFO] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c0fe6c5
+[2026-05-28 15:06:37] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+[2026-05-28 15:06:38] [WARN] [org.hibernate.orm.deprecation] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2026-05-28 15:06:38] [INFO] [o.hibernate.orm.connections.pooling] - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_hackathon_springapi?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.7
+	Default catalog/schema: db_hackathon_springapi/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-05-28 15:06:39] [INFO] [org.hibernate.orm.core] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-05-28 15:06:39] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-05-28 15:06:39] [INFO] [o.s.d.j.r.q.QueryEnhancerFactories] - Hibernate is in classpath; If applicable, HQL parser will be used.
+[2026-05-28 15:06:39] [WARN] [o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-05-28 15:06:40] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - Started KiemTraHackathonSpringApiApplicationTests in 5.563 seconds (process running for 7.26)
+[2026-05-28 15:06:40] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [ra.demo.controller.BookControllerTest]: BookControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2026-05-28 15:06:40] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration ra.demo.KiemTraHackathonSpringApiApplication for test class ra.demo.controller.BookControllerTest
+[2026-05-28 15:06:40] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [ra.demo.controller.BookControllerTest]: BookControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2026-05-28 15:06:40] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration ra.demo.KiemTraHackathonSpringApiApplication for test class ra.demo.controller.BookControllerTest
+[2026-05-28 15:06:40] [INFO] [r.demo.controller.BookControllerTest] - Starting BookControllerTest using Java 21.0.11 with PID 21036 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 15:06:40] [DEBUG] [r.demo.controller.BookControllerTest] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 15:06:40] [INFO] [r.demo.controller.BookControllerTest] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 15:06:41] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+[2026-05-28 15:06:41] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+[2026-05-28 15:06:41] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 3 ms
+[2026-05-28 15:06:41] [INFO] [r.demo.controller.BookControllerTest] - Started BookControllerTest in 0.892 seconds (process running for 8.644)
+[2026-05-28 15:06:42] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=99
+[2026-05-28 15:06:42] [ERROR] [r.demo.service.impl.BookServiceImpl] - Không tìm thấy sách với id=99
+[2026-05-28 15:06:42] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBooks()
+[2026-05-28 15:06:42] [INFO] [r.demo.service.impl.BookServiceImpl] - Lấy danh sách sách thành công, số lượng = 2
+[2026-05-28 15:06:42] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=1
+[2026-05-28 15:06:42] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-05-28 15:06:42] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+[2026-05-28 15:06:42] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+[2026-05-28 15:07:17] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 9.0.1.Final
+[2026-05-28 15:07:17] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - Starting KiemTraHackathonSpringApiApplicationTests using Java 21.0.11 with PID 14036 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 15:07:17] [DEBUG] [r.d.KiemTraHackathonSpringApiApplicationTests] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 15:07:17] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 15:07:18] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-05-28 15:07:18] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interface.
+[2026-05-28 15:07:19] [INFO] [org.hibernate.orm.jpa] - HHH008540: Processing PersistenceUnitInfo [name: default]
+[2026-05-28 15:07:19] [INFO] [org.hibernate.orm.core] - HHH000001: Hibernate ORM core version 7.2.12.Final
+[2026-05-28 15:07:19] [INFO] [o.s.o.j.p.SpringPersistenceUnitInfo] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-05-28 15:07:19] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+[2026-05-28 15:07:20] [INFO] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32245b66
+[2026-05-28 15:07:20] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+[2026-05-28 15:07:20] [WARN] [org.hibernate.orm.deprecation] - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2026-05-28 15:07:20] [INFO] [o.hibernate.orm.connections.pooling] - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_hackathon_springapi?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 9.7
+	Default catalog/schema: db_hackathon_springapi/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-05-28 15:07:21] [INFO] [org.hibernate.orm.core] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-05-28 15:07:21] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-05-28 15:07:21] [INFO] [o.s.d.j.r.q.QueryEnhancerFactories] - Hibernate is in classpath; If applicable, HQL parser will be used.
+[2026-05-28 15:07:21] [WARN] [o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-05-28 15:07:22] [INFO] [r.d.KiemTraHackathonSpringApiApplicationTests] - Started KiemTraHackathonSpringApiApplicationTests in 4.679 seconds (process running for 6.269)
+[2026-05-28 15:07:22] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [ra.demo.controller.BookControllerTest]: BookControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2026-05-28 15:07:22] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration ra.demo.KiemTraHackathonSpringApiApplication for test class ra.demo.controller.BookControllerTest
+[2026-05-28 15:07:22] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [ra.demo.controller.BookControllerTest]: BookControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2026-05-28 15:07:22] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration ra.demo.KiemTraHackathonSpringApiApplication for test class ra.demo.controller.BookControllerTest
+[2026-05-28 15:07:22] [INFO] [r.demo.controller.BookControllerTest] - Starting BookControllerTest using Java 21.0.11 with PID 14036 (started by phama in C:\Users\phama\Downloads\KiemTraHackathon_SpringAPI\KiemTraHackathon_SpringAPI)
+[2026-05-28 15:07:22] [DEBUG] [r.demo.controller.BookControllerTest] - Running with Spring Boot v4.0.6, Spring v7.0.7
+[2026-05-28 15:07:22] [INFO] [r.demo.controller.BookControllerTest] - No active profile set, falling back to 1 default profile: "default"
+[2026-05-28 15:07:23] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+[2026-05-28 15:07:23] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+[2026-05-28 15:07:23] [INFO] [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 3 ms
+[2026-05-28 15:07:23] [INFO] [r.demo.controller.BookControllerTest] - Started BookControllerTest in 0.626 seconds (process running for 7.383)
+[2026-05-28 15:07:23] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=99
+[2026-05-28 15:07:23] [ERROR] [r.demo.service.impl.BookServiceImpl] - Không tìm thấy sách với id=99
+[2026-05-28 15:07:23] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBooks()
+[2026-05-28 15:07:23] [INFO] [r.demo.service.impl.BookServiceImpl] - Lấy danh sách sách thành công, số lượng = 2
+[2026-05-28 15:07:23] [DEBUG] [r.demo.service.impl.BookServiceImpl] - Request getBookById(), id=1
+[2026-05-28 15:07:23] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-05-28 15:07:23] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+[2026-05-28 15:07:23] [INFO] [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
